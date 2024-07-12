@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Created By: Vasudevan Sampath -->
+
+<suite name="Lambda Test Demo Web Automation Suite" parallel="tests" thread-count="3" verbose="1">
+
+    <test name="Smoke-Tests-Chrome" enabled="true">
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="headless" value="false"/>
+        <parameter name="launchURL" value="https://ecommerce-playground.lambdatest.io"/>
+        <parameter name="loginId" value="playwright@playwright.com"/>
+        <parameter name="password" value="password1"/>
+        <classes>
+            <class name="pro.vasudevan.LambdaTest.suites.HomePageTests"/>
+            <class name="pro.vasudevan.LambdaTest.suites.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Smoke-Tests-Firefox" enabled="true">
+        <parameter name="browserName" value="firefox"/>
+        <parameter name="headless" value="false"/>
+        <parameter name="launchURL" value="https://ecommerce-playground.lambdatest.io"/>
+        <parameter name="loginId" value="playwright@playwright.com"/>
+        <parameter name="password" value="password1"/>
+        <classes>
+            <class name="pro.vasudevan.LambdaTest.suites.HomePageTests"/>
+            <class name="pro.vasudevan.LambdaTest.suites.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Smoke-Tests-Safari" enabled="true">
+        <parameter name="browserName" value="safari"/>
+        <parameter name="headless" value="false"/>
+        <parameter name="launchURL" value="https://ecommerce-playground.lambdatest.io"/>
+        <parameter name="loginId" value="playwright@playwright.com"/>
+        <parameter name="password" value="password1"/>
+        <classes>
+            <class name="pro.vasudevan.LambdaTest.suites.HomePageTests"/>
+            <class name="pro.vasudevan.LambdaTest.suites.LoginTests"/>
+        </classes>
+    </test>
+
+</suite>
