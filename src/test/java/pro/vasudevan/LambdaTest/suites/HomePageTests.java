@@ -27,13 +27,13 @@ public class HomePageTests extends TestBase {
 
     @Test(priority = 0, dataProvider = "TestDataProvider", dataProviderClass = CSVTestDataProvider.class)
     @TestData(file="HomePageHorizontalLinks.csv", rowDataDelimiter = ";")
-    public void verifyForThePresenceOfHomePageLinksTest(Map<String, Object> map) throws InterruptedException {
+    public void verifyForThePresenceOfHomePageLinksTest(Map<Object, Object> map) throws InterruptedException {
         Assert.assertEquals(homePage.getHomePageLinks(), map.values());
     }
 
     @Test(priority = 1, dataProvider = "TestDataProvider", dataProviderClass = CSVTestDataProvider.class)
     @TestData(file="HomePageVerticalLinks.csv", firstRowColumnNames = false)
-    public void verifyForThePresenceOfHomePageVerticalLinksTest(Map<String, Object> map) throws InterruptedException {
+    public void verifyForThePresenceOfHomePageVerticalLinksTest(Map<Object, Object> map) throws InterruptedException {
         Assert.assertEquals(homePage.getHomePageVerticalLinks(), map.values());
     }
 }

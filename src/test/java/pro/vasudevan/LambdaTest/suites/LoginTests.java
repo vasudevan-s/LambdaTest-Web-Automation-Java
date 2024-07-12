@@ -31,7 +31,7 @@ public class LoginTests extends TestBase {
 
     @Test(priority = 2, dataProvider = "TestDataProvider", dataProviderClass = CSVTestDataProvider.class)
     @TestData(file = "FailedLogin.csv")
-    public void verifyFailedLoginTest(Map<String, Object> map) throws InterruptedException {
+    public void verifyFailedLoginTest(Map<Object, Object> map) throws InterruptedException {
         loginPage.doLogin(UUID.randomUUID().toString(), UUID.randomUUID().toString());
         Assert.assertEquals(loginPage.getActualFailedLoginMessage(), map.get("failedLoginMessage"));
     }
